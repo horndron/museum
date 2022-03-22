@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Museum</title>
+  <link rel="icon" href="image/favicon.ico">
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="lib/tiny-slider/tiny-slider.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header bg-dark">
+    <div class="container d-flex fx-wrap jc-space-between ai-center">
+      <a class="logo" href="/">
+        <img src="image/logo.svg" alt="museum logo" loading="lazy">
+      </a>
+      <button id="menu-toggle"></button>
+      <div id="nav">
+        <nav class="main-menu">
+          <ul class="list-style-none  d-flex jc-space-between">
+            <li>
+              <a href="#visiting">Visiting</a>
+            </li>
+            <li>
+              <a href="#explore">Explore</a>
+            </li>
+            <li>
+              <a href="#video">Video</a>
+            </li>
+            <li>
+              <a href="#gallery">Gallery</a>
+            </li>
+            <li>
+              <a href="#tickets">Tickets</a>
+            </li>
+            <li>
+              <a href="#сontacts">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      
+    </div>
+  </header>
+
+  <main class="main-content">
+    
+    <section class="welcome-section bg-dark" id="welcome">
+
+      <div id="nav-mobile">
+        <nav class="main-menu">
+          <ul class="list-style-none  d-flex jc-space-between">
+            <li>
+              <a href="#visiting">Visiting</a>
+            </li>
+            <li>
+              <a href="#explore">Explore</a>
+            </li>
+            <li>
+              <a href="#video">Video</a>
+            </li>
+            <li>
+              <a href="#gallery">Gallery</a>
+            </li>
+            <li>
+              <a href="#tickets">Tickets</a>
+            </li>
+            <li>
+              <a href="#сontacts">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="images d-flex fx-wrap jc-space-between">
+          <div class="item item-1"></div>
+          <div class="item item-2"></div>
+          <div class="item item-3"></div>
+        </div>
+
+        <div class="social">
+          <ul class="list-style-none d-flex jc-space-between">
+            <li>
+              <a href="https://www.youtube.com/user/louvre">
+                <img src="image/social/Youtube.svg" alt="" loading="lazy">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/museelouvre/">
+                <img src="image/social/Instagram.svg" alt="" loading="lazy">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/museedulouvre">
+                <img src="image/social/Facebook.svg" alt="" loading="lazy">
+              </a>
+            </li>
+            <li>
+              <a href="http://twitter.com/museelouvre">
+                <img src="image/social/Twitter.svg" alt="" loading="lazy">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.pinterest.fr/museedulouvre/">
+                <img src="image/social/Pinterest.svg" alt="" loading="lazy">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container d-flex jc-end">
+
+        <div class="welcome-left absolute">
+          <h1 class="title">Welcome <br>to the Louvre</h1>
+          <p>From the castle to the museum</p>
+          <a class="btn btn-big bg-dark-red iframe-link" href="https://www.google.com/maps/embed?pb=!4v1632783031708!6m8!1m7!1sCAoSLEFGMVFpcE9WeFpRdVN5M0J4OVRfSHBIXzdGdEJIRFRYdkk2U0YtQTEwb2NU!2m2!1d48.86181593314584!2d2.336681797486702!3f81.55!4f-16.599999999999994!5f0.7820865974627469">Discover the Louvre</a>
+        </div>
+
+        <div class="slider">
+          <ul class="slide-list list-style-none" id="slider">
+            <li class="slide tns-slide-active">
+              <img src="image/slider/1.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide">
+              <img src="image/slider/2.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide">
+              <img src="image/slider/3.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide">
+              <img src="image/slider/4.jpg" alt="" loading="lazy">
+            </li>
+            <li class="slide">
+              <img src="image/slider/5.jpg" alt="" loading="lazy">
+            </li>
+          </ul>
+          <div class="slider-pagination d-flex fx-wrap ai-center bg-dark">
+            <div class="counter">
+              <span class="current">01</span>
+              <span class="slash">|</span>
+              <span class="all">05</span>
+            </div>
+            <div class="slider-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <div class="arrows">
+              <button class="arrow left">←</button>
+            <button class="arrow right">→</button>
+            </div>
+          </div>
+          
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section section-visiting" id="visiting">
+      <div class="container">
+        <h2 class="title underline color-gold">Virtual tour</h2>
+
+        <div class="d-flex fx-wrap jc-space-between">
+          <a class="item iframe-link" href="https://www.google.com/maps/embed?pb=!4v1632781412062!6m8!1m7!1sCAoSLEFGMVFpcE1aOVlnbkFyYndFSWJUREFOZVNRWUZ1OWdOcXBXXzJTdjhGQnZZ!2m2!1d48.8606881835717!2d2.335679134426641!3f337.7697271815267!4f0.16039987974879466!5f0.4000000000000002" target="frame-street-view">
+            <img src="image/visiting/royal_palace.jpg" alt="Royal Palace" loading="lazy">
+            <h3 class="title underline">Royal Palace</h3>
+            <p>360° Virtual Tour</p>
+            <p class="font-small">Google Street Panorama View</p>
+          </a>
+          <a class="item iframe-link" href="https://www.google.com/maps/embed?pb=!4v1632783691603!6m8!1m7!1sCAoSLEFGMVFpcE5Sal9Dd1A0Y29ETVlkQ0hqNnFIZUJlSnBJMlZ4VTVCVXNPWDRG!2m2!1d48.8563254!2d2.3352706!3f0!4f0!5f0.7820865974627469">
+            <img src="image/visiting/denon_wing.jpg" alt="Denon Wing" loading="lazy">
+            <h3 class="title underline">Denon Wing</h3>
+            <p>360° Virtual Tour</p>
+            <p class="font-small">Google Street Panorama View</p>
+          </a>
+          <a class="item iframe-link" href="https://www.google.com/maps/embed?pb=!4v1632784136230!6m8!1m7!1sCAoSLEFGMVFpcE5NWkdRdUVBLXBBVXZJR19lUF8yZjNnV1RLWkVKNlhMVkotUGdi!2m2!1d48.8601723!2d2.3395439!3f322.04!4f-5.75!5f0.440292882915489">
+            <img src="image/visiting/collonade.jpg" alt="Colonnade Perrault" loading="lazy">
+            <h3 class="title underline">Colonnade Perrault</h3>
+            <p>360° Virtual Tour</p>
+            <p class="font-small">Google Street Panorama View</p>
+          </a>
+          <a class="item iframe-link" href="https://www.google.com/maps/embed?pb=!4v1632784187171!6m8!1m7!1sCAoSLEFGMVFpcFA3dUZablRJVFJlLTdBRVZBZ0hBZnFpQ0wtMDNndkJIY1lXZ0Yz!2m2!1d48.86018303140322!2d2.335615591987402!3f177.69!4f5.609999999999999!5f0.4000000000000002">
+            <img src="image/visiting/greek_hall.jpg" alt="Greek hall" loading="lazy">
+            <h3 class="title underline">Greek hall</h3>
+            <p>360° Virtual Tour</p>
+            <p class="font-small">Google Street Panorama View</p>
+          </a>
+          <a class="item iframe-link" href="https://www.google.com/maps/embed?pb=!4v1632784221391!6m8!1m7!1sCAoSLEFGMVFpcE8xd2tVVWJ5enBQamotT1IwbVI1ZXRaSlQteGwtNDBYSzhyRFEz!2m2!1d48.85987877384653!2d2.335515730085149!3f7.53!4f4!5f0.5970117501821992">
+            <img src="image/visiting/mona_lisa.jpg" alt="Mona Lisa" loading="lazy">
+            <h3 class="title underline">Mona Lisa</h3>
+            <p>360° Virtual Tour</p>
+            <p class="font-small">Google Street Panorama View</p>
+          </a>
+          <a class="item iframe-link" href="https://www.google.com/maps/embed?pb=!4v1632784261948!6m8!1m7!1sCAoSLEFGMVFpcFBwR0Fvd1lhdFZ5azNNTUduWkFhUWtZbTJFVWstRGxjYTA2U1M1!2m2!1d48.8563254!2d2.3352706!3f21.26!4f-10.090000000000003!5f0.4000000000000002">
+            <img src="image/visiting/night_palace.jpg" alt="Night Palace" loading="lazy">
+            <h3 class="title underline">Night Palace</h3>
+            <p>360° Virtual Tour</p>
+            <p class="font-small">Google Street Panorama View</p>
+          </a>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="section section-explore bg-dark color-white" id="explore">
+      <div class="container d-flex fx-wrap jc-space-between">
+
+        <div class="item left-part">
+          <h2 class="title underline">Picture explore</h2>
+          <p>Las Meninas is a 1656 painting by Diego Velázquez, the leading <br>artist of the Spanish Golden Age.</p>
+          <p>It was cleaned in 1984 to remove a <span class="color-gold">"yellow veil"</span> of dust that had gathered since the previous restoration in the 19th century.</p>
+          <p>The cleaning provoked furious protests, not because the picture had been damaged in any way, but because it looked different.</p>
+        </div>
+
+        <div class="item right-part">
+          <div class="slider-separator">
+            <div class="img">
+              <img class="left-img" src="image/explore/explore2.jpg" alt="" loading="lazy">
+            </div>
+            <span class="separator absolute"></span>
+            <div class="img img-overlay">
+              <img class="right-img" src="image/explore/explore1.jpg" alt="" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section section-video" id="video">
+      <div class="container">
+
+        <div class="top d-flex fx-wrap jc-space-between mb-75">
+          <h2 class="title color-gold">Video journey</h2>
+          <p>Enter and visit one of the most famous museums in the world and enjoy masterpieces such as Mona Lisa or Hammurabi's Code</p>
+        </div>
+
+        <div class="video center-video relative">
+          <video class='video-viewer' src="video/video0.mp4" poster="video/poster0.jpg"></video>
+          <button class="bigplay"></button>
+          <div class="navigation-video d-flex fx-wrap jc-space-around ai-center bg-dark">
+            <button  class="play">
+              <img src="image/video/play.svg" alt="play button" loading="lazy">
+            </button>
+            <input class="range track-time" type="range" value="0" min="0" max="1" step="0.001" name="time">
+            <button  class="volume">
+              <img src="image/video/volume.svg" alt="volume button" loading="lazy">
+            </button>
+            <input class="range track-volume" type="range" value="0.43" min="0" max="1" step="0.001" name="volume">
+
+            <button  class="fullscreen">
+              <img src="image/video/fullscreen.svg" alt="fullscreen button" loading="lazy">
+            </button>
+          </div>
+        </div>
+
+        <div class="video-bottom slider">
+          <div class="slider-three-item">
+            <ul class="slide-list list-style-none" id="slider-video">
+              <li class="slide">
+                <iframe class="ytplayer" type="text/html" width="720" height="405"
+                src="https://www.youtube.com/embed/zp1BXPX8jcU?enablejsapi=1"
+                frameborder="0" allowfullscreen></iframe>
+              </li>
+             
+              <li class="slide">
+                <iframe class="ytplayer" type="text/html" width="720" height="405"
+                src="https://www.youtube.com/embed/Vi5D6FKhRmo?enablejsapi=1"
+                frameborder="0" allowfullscreen></iframe>
+              </li>
+              <li class="slide">
+                <iframe class="ytplayer" type="text/html" width="720" height="405"
+                src="https://www.youtube.com/embed/NOhDysLnTvY?enablejsapi=1"
+                frameborder="0" allowfullscreen></iframe>
+              </li>
+              <li class="slide">
+                <iframe class="ytplayer" type="text/html" width="720" height="405"
+                src="https://www.youtube.com/embed/aWmJ5DgyWPI?enablejsapi=1"
+                frameborder="0" allowfullscreen></iframe>
+              </li>
+              <li class="slide">
+                <iframe class="ytplayer" type="text/html" width="720" height="405"
+                src="https://www.youtube.com/embed/2OR0OCr6uRE?enablejsapi=1"
+                frameborder="0" allowfullscreen></iframe>
+              </li>
+            </ul>
+            <div class="slider-three-item-pagination d-flex fx-wrap ai-center jc-space-between">
+              <button class="arrow left video-arrow">
+                <img src="image/video/prev.svg" alt="" loading="lazy">
+              </button>
+              <div class="dots-video">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+
+              <button class="arrow right video-arrow">
+                <img src="image/video/next.svg" alt="" loading="lazy">
+              </button>
+            </div>
+            
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section section-gallery bg-dark" id="gallery">
+      <div class="container">
+        <h2 class="title color-white mb-75">Art Gallery</h2>
+
+        <div class="gallery relative">
+          <div class="gallery-inner">
+           
+              <img class="gallery-image" src="image/gallery/galery-1.jpg" alt="" loading="lazy">
+              <img class="gallery-image" src="image/gallery/galery-4.jpg" alt="" loading="lazy">
+              <img class="gallery-image" src="image/gallery/galery-7.jpg" alt="" loading="lazy">
+              <img class="gallery-image" src="image/gallery/galery6.jpg" alt="" loading="lazy">
+              <img class="gallery-image" src="image/gallery/galery11.jpg" alt="" loading="lazy">
+           
+            
+         
+              <img class="gallery-image" src="image/gallery/galery-2.jpg" alt="" loading="lazy">
+              <img class="gallery-image" src="image/gallery/galery-5.jpg" alt="" loading="lazy">
+              <img class="gallery-image" src="image/gallery/galery-8.jpg" alt="" loading="lazy">
+              <img class="gallery-image" src="image/gallery/galery5.jpg" alt="" loading="lazy">
+              <img class="gallery-image" src="image/gallery/galery13.jpg" alt="" loading="lazy">
+            
+            
+            
+              <img class="gallery-image" src="image/gallery/galery-3.jpg" alt="" loading="lazy">
+              <img class="gallery-image" src="image/gallery/galery-6.jpg" alt="" loading="lazy">
+              <img class="gallery-image" src="image/gallery/galery-9.jpg" alt="" loading="lazy">
+              <img class="gallery-image" src="image/gallery/galery12.jpg" alt="" loading="lazy">
+              <img class="gallery-image" src="image/gallery/galery14.jpg" alt="" loading="lazy">
+            
+          </div>
+          
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section section-tickets" id="tickets">
+      <div class="container">
+        <h2 class="title underline color-gold">BUY TICKETS</h2>
+        <div class="d-flex fx-wrap jc-space-between">
+
+          <div class="left">
+            <img src="image/tickets.jpg" alt="" loading="lazy">
+          </div>
+
+          <div class="right">
+            <form class="form choice-ticket d-flex fx-wrap jc-space-between" method="post">
+
+              <div class="type">
+                <p class="form-title">Ticket Type</p>
+                  <input type="radio" name="ticket_type" id="permanent" value="20" checked>
+                  <label for="permanent">Permanent exhibition</label>
+                <input type="radio" name="ticket_type" id="temporary" value="25">
+                <label for="temporary">Temporary exhibition</label>
+
+                <input type="radio" name="ticket_type" id="combined" value="40">
+                <label for="combined">Combined Admission</label>
+              </div>
+              <div class="amount">
+                <p class="form-title">Amount</p>
+
+                <div class="form-control basic">
+                  <label>Basic 18+</label>
+                  <div class="number">
+                    <button class="prev" type="button">–</button>
+                    <input type="number" name="basic" min="0" max="20" value="0" readonly >
+                    <button class="next" type="button">+</button>
+                  </div> 
+                </div>
+                <div class="form-control senior">
+                  <label>Senior 65+</label>
+                  <div class="number">
+                    <button class="prev" type="button">–</button>
+                    <input type="number" name="senior" min="0" max="20" value="0" readonly >
+                    <button class="next" type="button">+</button>
+                  </div> 
+                </div>
+              </div>
+              <div class="bottom">
+                <p class="form-title total">Total €<span class="total-value">0</span></p>
+                <button class="btn btn-small" id="buy-now">Buy Now</button>
+              </div>
+
+            </form> 
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="section-paralax"></div>
+
+    <section class="section section-contacts" id="сontacts">
+      <div class="container">
+        <h2 class="title underline color-gold">Contacts</h2>
+
+        <div class="d-flex fx-wrap jc-space-between">
+
+          <div class="contacts left">
+            <p class="title-address">Palais Royal <br>Musee du Louvre</p>
+            <p>address: 75001 Paris, France</p>
+            <p>phone: <a href="tel:+330140205050">+33(0) 1 40 20 50 50</a></p>
+            <p>mail: <a href="mailto:info@louvre.fr">info@louvre.fr</a></p>
+          </div>
+
+          <div class="map right" id="map">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer bg-dark">
+    <div class="top-footer">
+      <div class="container d-flex fx-wrap jc-space-between">
+        <img class="footer-logo" src="image/logo.svg" alt="logo" loading="lazy">
+
+        <nav class="footer-menu">
+          <ul class="list-style-none">
+            <li>
+              <a href="#visiting">Visiting</a>
+            </li>
+            <li>
+              <a href="#explore">Explore</a>
+            </li>
+            <li>
+              <a href="#video">Video</a>
+            </li>
+            <li>
+              <a href="#gallery">Gallery</a>
+            </li>
+            <li>
+              <a href="#tickets">Tickets</a>
+            </li>
+            <li>
+              <a href="#сontacts">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="social">
+          <ul class="list-style-none d-flex jc-space-between">
+            <li>
+              <a href="https://www.youtube.com/user/louvre">
+                <img src="image/social/Youtube.svg" alt="" loading="lazy">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/museelouvre/">
+                <img src="image/social/Instagram.svg" alt="" loading="lazy">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/museedulouvre">
+                <img src="image/social/Facebook.svg" alt="" loading="lazy">
+              </a>
+            </li>
+            <li>
+              <a href="http://twitter.com/museelouvre">
+                <img src="image/social/Twitter.svg" alt="" loading="lazy">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.pinterest.fr/museedulouvre/">
+                <img src="image/social/Pinterest.svg" alt="" loading="lazy">
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container d-flex fx-wrap jc-space-between ai-center">
+        <p class="copyright">© 2021</p>
+        <p class="school">The Rolling Scopes School</p>
+        <p class="username">horndron</p>
+      </div>
+    </div>
+  
+  </footer>
+
+  <div class="overlay">
+    <div class="booking-tickets relative" id="booking-tickets">
+      <button class="close absolute"></button>
+      <div class="container">
+        <form class="form form-booking d-flex fx-wrap jc-space-between" method="post">
+
+          <div class="left-part">
+          <h2 class="title color-gold">Booking tickets</h2>
+          <p class="subtitle underline">Tour to Louvre</p>
+
+          <div class="form-control d-flex fx-wrap jc-space-between">
+            <input class="date" type="date" name="date" data-placeholder="Date" min="2021-10-10" required>
+            <!-- <input class="time" type="time" step="1800" name="time" min="09:00:00" max="18:00:00"  data-placeholder="Time" required> -->
+            <div class="full time">
+              <select class="select-time" name="time">
+                <option value="">Time</option>
+                <option value="09:00">09:00</option>
+                <option value="09:30">09:30</option>
+                <option value="10:00">10:00</option>
+                <option value="10:30">10:30</option>
+                <option value="11:00">11:00</option>
+                <option value="11:30">11:30</option>
+                <option value="12:00">12:00</option>
+                <option value="12:30">12:30</option>
+                <option value="13:00">13:00</option>
+                <option value="13:30">13:30</option>
+                <option value="14:00">14:00</option>
+                <option value="14:30">14:30</option>
+                <option value="15:00">15:00</option>
+                <option value="15:30">15:30</option>
+                <option value="16:00">16:00</option>
+                <option value="16:30">16:30</option>
+                <option value="17:00">17:00</option>
+                <option value="17:30">17:30</option>
+                <option value="18:00">18:00</option>
+              </select>
+            </div>
+            <div class="label full">
+              <input class="name" type="text" name="name" placeholder="Name">
+            </div>
+            <div class="label full">
+              <input class="email" type="email" name="email" placeholder="E-mail">
+            </div>
+            <div class="label full">
+              <input class="full tel" type="tel" name="phone" placeholder="Phone">
+            </div>
+            <div class="full select">
+              <select class="full select-ticket-type" name="type" >
+                <option value="0">Ticket Type</option>
+                <option value="20">Permanent exhibition</option>
+                <option value="25">Temporary exhibition</option>
+                <option value="40">Combined Admission</option>
+              </select>
+            </div>
+            
+          <div class="entry-ticket">
+            <p class="underline color-gold">Entry ticket</p>
+            <div class="entry-ticket-basic d-flex fx-wrap jc-space-between ai-center">
+              <span>Basic 18+ (<span class="price-basic">20</span> €)</span>
+              <div class="number">
+                <button class="prev" type="button"></button>
+                <input type="number" name="basic" min="0" max="20" value="1" readonly >
+                <button class="next" type="button"></button>
+              </div>
+            </div>
+            <div class="entry-ticket-senior d-flex fx-wrap jc-space-between ai-center">
+              <span>Senior 65+ (<span class="price-senior">10</span> €)</span>
+              <div class="number">
+                <button class="prev" type="button"></button>
+                <input type="number" name="senior" min="0" max="20" value="1" readonly >
+                <button class="next" type="button"></button>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+
+          <div class="right-part d-flex fx-wrap jc-space-between">
+          <div class="description">
+            <p class="form-title">Overview</p>
+            <p class="form-name-tour">Tour to Louvre</p>
+            <p class="choice" id="choice-date">Friday, August 19</p>
+            <p class="choice" id="choice-time">16:30</p>
+            <p class="choice" id="choice-ticket-type">Temporary exhibition</p>
+          </div>
+          <img class="choice-tour-img" src="image/choice-tour-img.jpg" alt="choice tour" loading="lazy">
+
+          <div class="count-total underline">
+            <div class="count-total-basic d-flex fx-wrap jc-space-between ai-center">
+              <p class="count count-basic">2</p>
+              <p class="name">Basic (<span class="price-basic">20</span> €)</p>
+              <p class="price price-basic-total">40 €</p>
+            </div>
+            <div class="count-total-senior d-flex fx-wrap jc-space-between ai-center">
+              <p class="count count-senior">2</p>
+              <p class="name">Senior (<span class="price-senior">10</span> €)</p>
+              <p class="price price-senior-total">20 €</p>
+            </div>
+          </div>
+
+          <div class="d-flex fx-wrap jc-space-between ai-center" id="total-booking-price">
+            <p class="form-title">Total:</p>
+            <p class="form-title total-value">60 €</p>
+          </div>
+
+          <div class="card-to-pay d-flex fx-wrap jc-space-between">
+            <div class="card-side front-card">
+
+              <div class="form-control left">
+                <label>Card number</label>
+                <input class="cart-number" type="number" name="cart-number">
+              </div>
+              <div class="form-control d-flex fx-wrap jc-space-between left">
+                <label>Expiration date</label>
+                <input class="month" type="number" name="month" min="01" max="12" value="03">
+                <input class="year" type="number" name="year" min="1950" max="2099" value="2024">
+              </div>
+              <div class="form-control">
+                <label>Cardholder name</label>
+                <input class="cartholder-name" name="cartholder-name" type="number">
+              </div>
+
+            </div>
+
+            <div class="card-side back-card d-flex fx-wrap jc-space-between">
+              <div class="form-control">
+                <label>CVC/CVV</label>
+                <input class="cvc" type="number" name="cvc" max="9999">
+                <p>The last <br>3 or 4 digits <br>on back <br>of the card</p>
+              </div>
+            </div>
+
+          </div>
+
+          <button class="btn btn-form" type="submit">Book</button>
+
+          
+
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="back-to-top">
+    <img src="image/up-arrow.png" alt="">
+  </div>
+
+  <div class="iframe-overlay">
+    <iframe data-src="https://www.google.com/maps/embed?pb=!4v1632783031708!6m8!1m7!1sCAoSLEFGMVFpcE9WeFpRdVN5M0J4OVRfSHBIXzdGdEJIRFRYdkk2U0YtQTEwb2NU!2m2!1d48.86181593314584!2d2.336681797486702!3f81.55!4f-16.599999999999994!5f0.7820865974627469" allowfullscreen="" name="frame-street-view" loading="lazy"></iframe>
+  </div>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src='lib/tiny-slider/tiny-slider.js'></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+  <script src="js/script.js" defer></script>
+</body>
+</html>
